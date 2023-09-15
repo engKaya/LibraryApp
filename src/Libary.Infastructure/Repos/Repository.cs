@@ -1,8 +1,9 @@
-﻿using Library.Domain.Entity;
+﻿using Library.Domain.BaseClasses;
 using Library.Domain.Interfaces;
 using Library.Infastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
+using System.Threading;
 
 namespace Libary.Application.Interfaces
 {
@@ -15,9 +16,9 @@ namespace Libary.Application.Interfaces
             this.context = context;
         }
 
-        public async Task<T> Add(T entity)
+        public async Task<T> Add(T entity, CancellationToken cancellationToken)
         {
-            await context.Set<T>().AddAsync(entity);
+            await context.Set<T>().AddAsync(entity, cancellationToken);
             return entity;
         }
 

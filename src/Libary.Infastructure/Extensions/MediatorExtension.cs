@@ -1,6 +1,6 @@
-﻿using Library.Infastructure.Context;
+﻿using Library.Domain.BaseClasses;
+using Library.Infastructure.Context;
 using MediatR;
-using Library.Domain.Entity;
 namespace Libary.Infastructure.Extensions
 {
     public static class MediatorExtension

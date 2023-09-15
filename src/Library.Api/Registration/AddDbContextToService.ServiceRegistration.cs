@@ -1,7 +1,7 @@
 ﻿using Library.Infastructure.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace Library.Api.Extensions
+namespace Library.Api.Registration
 {
     public static class AddDbContextToService
     {
@@ -9,7 +9,8 @@ namespace Library.Api.Extensions
         {
             services.AddDbContext<LibraryDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("UserConnectionString"));
+                var dbco = configuration.GetConnectionString("AppConnectionString");
+                options.UseSqlServer(dbco);
                 options.EnableSensitiveDataLogging();
             });
 

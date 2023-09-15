@@ -1,4 +1,4 @@
-﻿using Library.Domain.Entity;
+﻿using Library.Domain.BaseClasses;
 using System.Linq.Expressions;
 
 namespace Library.Domain.Interfaces
@@ -8,7 +8,7 @@ namespace Library.Domain.Interfaces
         Task<T> FindFirst(Expression<Func<T, bool>> predicate, Func<IQueryable, IOrderedQueryable<T>>? orderBy = null, params Expression<Func<T, object>>[] includes);
         Task<IEnumerable<T>> GetAll(); 
         Task<IEnumerable<T>> GetWhere(Expression<Func<T, bool>> predicate, Func<IQueryable, IOrderedQueryable<T>>? orderBy = null, params Expression<Func<T, object>>[] includes);
-        Task<T> Add(T entity);
+        Task<T> Add(T entity, CancellationToken cancellationToken);
         Task<IEnumerable<T>> AddRangeAsync(IEnumerable<T> entities);
         T Update(T entity);
         IEnumerable<T> UpdateRange(IEnumerable<T> entities);

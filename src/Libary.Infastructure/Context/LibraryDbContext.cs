@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Libary.Infastructure.EntityConfiguration;
+using Library.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Library.Infastructure.Context
 {
@@ -10,10 +12,10 @@ namespace Library.Infastructure.Context
         {
         }
 
-        //public DbSet<Users> Users { get; set; }
+        public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.ApplyConfiguration(new UserDbConfiguration());
+            modelBuilder.ApplyConfiguration(new UserEntityConfiguration());
         }
     }
 }

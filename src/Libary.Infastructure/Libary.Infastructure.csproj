@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="EntityConfiguration\" />
-    <Folder Include="Validations\" />
   </ItemGroup>
 
   <ItemGroup>

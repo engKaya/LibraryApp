@@ -107,7 +107,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Kaya\\Desktop\\Train Projects\\LibraryApp\\src\\Library.Domain\\Library.Domain.csproj": {
+                "projectPath": "C:\\Users\\Kaya\\Desktop\\Train Projects\\LibraryApp\\src\\Library.Domain\\Library.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -213,6 +217,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.7.1, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.1.1, )"

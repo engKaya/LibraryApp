@@ -1,4 +1,6 @@
 ﻿using Libary.Infastructure.Extensions;
+using Libary.Infastructure.Repos;
+using Library.Application.Interfaces.Repos;
 using Library.Infastructure.Context;
 using MediatR;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -64,14 +66,14 @@ namespace Libary.Infastructure.Uof
 
 
 
-        //private IUserRepository userRepository;
-        //public IUserRepository UserRepository
-        //{
-        //    get
-        //    {
-        //        userRepository = new UserRepository(_userDbContext);
-        //        return userRepository;
-        //    }
-        //}
+        private IUserRepository userRepository;
+        public IUserRepository UserRepository
+        {
+            get
+            {
+                userRepository = userRepository ?? new UserRepository(_libDbContext);
+                return userRepository;
+            }
+        }
     }
 }

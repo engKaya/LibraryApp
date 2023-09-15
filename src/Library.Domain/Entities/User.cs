@@ -1,4 +1,5 @@
 ﻿using Library.Domain.BaseClasses;
+using Library.Domain.DTOs;
 using Library.Domain.Helper;
 
 namespace Library.Domain.Entities
@@ -30,6 +31,16 @@ namespace Library.Domain.Entities
         public bool VerifyPassword(string password)
         {
             return PasswordHasher.VerifyHashedPassword(this._password, password);
+        }
+        public User()
+        {
+
+        }
+        public User(CreateUserRequest request)
+        {
+            this._fullName = request.FullName;
+            this._email = request.Email;
+            this._password = PasswordHasher.HashPassword(request.Password);
         }
     }
 }

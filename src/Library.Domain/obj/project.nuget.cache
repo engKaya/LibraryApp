@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "46proCiN/vFk+60a8Fv/Ykobw1PI53d3nlo7Cc1knIWlMpnTQeczuD2KpjnQ5BKbWmG5oLZbJgwqhJSiVwIlog==",
+  "dgSpecHash": "uU62Oh1yw2pMm0sox7ZxAJTvs0/6qmgXykeRX+ERjTHn3pQamSgGBezdUqQlDyLEyIHyfMYS4tyv6T/w/MMK/A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kaya\\Desktop\\Train Projects\\LibraryApp\\src\\Library.Domain\\Library.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Kaya\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
     "C:\\Users\\Kaya\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\Kaya\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Kaya\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",

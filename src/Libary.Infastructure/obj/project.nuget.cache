@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Qcl+FH5iZlEQKby3rMF5TTejRu5fQjB3Lxk2zGiR7m2nk+X0pvyxaetFABx6IkoVAkiHXbSQV/DiqduSj1Tjmg==",
+  "dgSpecHash": "Mjez8hABHs2+SqXpU7OG0uMSNIHW3s91l61v4Oo+XHvtsv190i18WFIfoz8FRqqzI07MY+fkqXwYd+5ttEE80w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kaya\\Desktop\\Train Projects\\LibraryApp\\src\\Libary.Infastructure\\Libary.Infastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kaya\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Kaya\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Kaya\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
     "C:\\Users\\Kaya\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\Kaya\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Kaya\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
