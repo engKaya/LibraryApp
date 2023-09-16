@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
 using Libary.Infastructure.Uof;
-using Library.Domain.DTOs;
-using System.Security.Cryptography.X509Certificates;
+using Library.Domain.DTOs.User;
 
 namespace Libary.Infastructure.Validations
 {

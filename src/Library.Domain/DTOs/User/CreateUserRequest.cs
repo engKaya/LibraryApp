@@ -1,4 +1,4 @@
-﻿namespace Library.Domain.DTOs
+﻿namespace Library.Domain.DTOs.User
 {
     public record CreateUserRequest(
             string FullName,

@@ -1,5 +1,5 @@
 ﻿using Library.Domain.BaseClasses;
-using Library.Domain.DTOs;
+using Library.Domain.DTOs.User;
 using Library.Domain.Helper;
 
 namespace Library.Domain.Entities

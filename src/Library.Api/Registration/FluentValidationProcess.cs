@@ -1,8 +1,9 @@
 ﻿using FluentValidation.AspNetCore;
 using FluentValidation;
 using Libary.Infastructure.Validations;
-using Library.Domain.DTOs;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;  
+using Library.Domain.DTOs.User;
+using Library.Domain.Validations;
 
 namespace Library.Api.Registration
 {
@@ -10,9 +11,8 @@ namespace Library.Api.Registration
     {
         public static IServiceCollection ConfigureValidation(this IServiceCollection services)
         {
-            services.AddScoped<IValidator<CreateUserRequest>, CreateUserRequestValidation>();
-            services.AddFluentValidation(s =>
-            {
+           //services.RegisterValidationCouples();
+            services.AddFluentValidation(s =>{
                 s.RegisterValidatorsFromAssemblyContaining<CreateUserRequestValidation>();
             });
             services.Configure<ApiBehaviorOptions>(opt =>
@@ -21,6 +21,13 @@ namespace Library.Api.Registration
             });
 
             return services;
+        }
+
+        public static void RegisterValidationCouples(this IServiceCollection services)
+        {
+            services.AddScoped<IValidator<CreateUserRequest>, CreateUserRequestValidation>();
+            services.AddScoped<IValidator<LoginRequest>, LoginRequestValidation>();
+
         }
     }
 }

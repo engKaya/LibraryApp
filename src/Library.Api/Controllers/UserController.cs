@@ -1,19 +1,22 @@
-﻿using Library.Domain.BaseClasses;
-using Library.Domain.DTOs;
+﻿using Libary.Infastructure.Services.Interfaces;
+using Library.Domain.BaseClasses; 
+using Library.Domain.DTOs.User;
 using Library.Domain.Entities;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc; 
 
 namespace Library.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : BaseController
     {
         private readonly ILogger<UserController> logger;
+        private readonly IUserService userService;
 
-        public UserController(ILogger<UserController> _logger)
+        public UserController(ILogger<UserController> logger, IUserService userService)
         {
-            logger = _logger;
+            this.logger = logger;
+            this.userService = userService;
         }
 
         [HttpPost]
@@ -24,14 +27,28 @@ namespace Library.Api.Controllers
         {
             try
             { 
-                var newUser = new User(req);
-                var result = await uof.UserRepository.Add(newUser, cancellationToken);
-                await uof.SaveChangesAsync(cancellationToken);
-                var response = ResponseMessage<User>.Success(result);
-                return Custom(response);
+                return Custom(await userService.CreateUser(req,cancellationToken));
             }
             catch (Exception ex)
             { 
+                logger.LogError(ex, ex.Message);
+                return BadRequest(ResponseMessage<User>.Fail(ex));
+            }
+        }
+
+        [HttpPost]
+        [ActionName("Login")]
+        [ProducesResponseType(typeof(ResponseMessage<LoginResponse>), 200)]
+        [ProducesResponseType(typeof(ResponseMessage<LoginResponse>), 401)]
+        [ProducesResponseType(typeof(ResponseMessage<LoginResponse>), 500)]
+        public async Task<ActionResult<ResponseMessage<User>>> Login([FromBody] LoginRequest req, CancellationToken cancellationToken)
+        {
+            try
+            {
+                return Custom(await userService.Login(req, cancellationToken));
+            }
+            catch (Exception ex)
+            {
                 logger.LogError(ex, ex.Message);
                 return BadRequest(ResponseMessage<User>.Fail(ex));
             }
