@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6A032E90-DD2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.Application", "src\Library.Application\Library.Application.csproj", "{0467EC53-9C12-49A3-8BEB-8CF050785EC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Domain", "src\Library.Domain\Library.Domain.csproj", "{F897C1AA-6086-4319-8E86-230263511D01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.Domain", "src\Library.Domain\Library.Domain.csproj", "{F897C1AA-6086-4319-8E86-230263511D01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libary.Infastructure", "src\Libary.Infastructure\Libary.Infastructure.csproj", "{522BD963-085D-4A4E-80D0-3A0121FE5BFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Libary.Infastructure", "src\Libary.Infastructure\Libary.Infastructure.csproj", "{522BD963-085D-4A4E-80D0-3A0121FE5BFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
